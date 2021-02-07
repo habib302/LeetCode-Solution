@@ -17,6 +17,10 @@ int knapSack(int W, int wt[], int val[], int n)
 
 int main()
  {
+    // added the two lines below for faster input
+    ios_base::sync_with_stdio(false); 
+    cin.tie(NULL);
+    
     //taking total testcases
     int t;
     cin>>t;
