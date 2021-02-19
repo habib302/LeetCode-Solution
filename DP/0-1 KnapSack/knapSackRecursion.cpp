@@ -5,14 +5,15 @@ using namespace std;
 
 // Returns the maximum value that  
 // can be put in a knapsack of capacity W 
-int knapSack(int W, int wt[], int val[], int n)
+int knapSack(int wt[], int val[], int W, int n)
 {
     if(n==0 || W==0) return 0;
     if(wt[n-1] <= W) 
-        return max( val[n-1]+knapSack(W-wt[n-1],wt,val,n-1),knapSack(W,wt,val,n-1));
+        return max( val[n-1]+knapSack(wt, val, W-wt[n-1],n-1),
+                             knapSack(wt, val, W        ,n-1));
     
-    else return knapSack(W,wt,val,n-1);
-   
+    else return              knapSack(wt, val, W        ,n-1);
+
 }
 
 int main()
@@ -27,8 +28,8 @@ int main()
     while(t--)
     {
         //reading number of elements and weight
-        int n, w;
-        cin>>n>>w;
+        int n, W;
+        cin>>n>>W;
         
         int val[n];
         int wt[n];
@@ -42,7 +43,7 @@ int main()
          cin>>wt[i];
         
         //calling method knapSack()
-        cout<<knapSack(w, wt, val, n)<<endl;
+        cout<<knapSack(wt,val,W,n)<<endl;
         
     }
 	return 0;

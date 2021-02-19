@@ -1,0 +1,1 @@
+{"name":"Local: KnapSackDP","url":"e:\\Leetcode Solution\\DP\\0-1 KnapSack\\KnapSackDP.cpp","tests":[{"id":1613626079442,"input":"2\n3 4\n1 2 3\n4 5 1\n3 3\n1 2 3\n4 5 6","output":"3\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Leetcode Solution\\DP\\0-1 KnapSack\\KnapSackDP.cpp","group":"local","local":true}
