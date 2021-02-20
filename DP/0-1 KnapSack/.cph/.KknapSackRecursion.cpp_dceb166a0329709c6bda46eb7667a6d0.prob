@@ -1,0 +1,1 @@
+{"name":"Local: KknapSackRecursion","url":"f:\\LeetCode-Solution\\DP\\0-1 KnapSack\\KknapSackRecursion.cpp","tests":[{"id":1612667432161,"input":"1\n3\n4\n1 2 3\n4 5 1","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\LeetCode-Solution\\DP\\0-1 KnapSack\\KknapSackRecursion.cpp","group":"local","local":true}
