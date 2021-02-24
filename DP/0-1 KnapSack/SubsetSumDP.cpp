@@ -43,7 +43,7 @@ bool SubsetSum(int nums[],int n,int sum)
 
       else if(i==0) dp[i][j]=false;
       
-      else if(j==0) dp[i][j]=true;
+      //else if(j==0) dp[i][j]=true;
 
       else if(nums[i-1]<=j){
         dp[i][j]= (dp[i-1][j-nums[i-1]]) || (dp[i-1][j]);
@@ -56,12 +56,12 @@ bool SubsetSum(int nums[],int n,int sum)
     }
   }
 
-  for(int i=0;i<(n+1);i++){
-    for(int j=0;j<(sum+1);j++){
-      cout<<dp[i][j]<<" ";
-    }
-    cout<<'\n';
-  }
+  // for(int i=0;i<(n+1);i++){
+  //   for(int j=0;j<(sum+1);j++){
+  //     cout<<dp[i][j]<<" ";
+  //   }
+  //   cout<<'\n';
+  // }
 
   return dp[n][sum];
 }
