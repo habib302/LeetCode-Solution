@@ -7,7 +7,8 @@ using namespace std;
 // can be put in a knapsack of capacity W 
 int knapSack(int wt[], int val[], int W, int n)
 {
-    if(n==0 || W==0) return 0;
+    if(n==0) return 0;
+    if(W==0) return 0;
     if(wt[n-1] <= W) 
         return max( val[n-1]+knapSack(wt, val, W-wt[n-1],n-1),
                              knapSack(wt, val, W        ,n-1));

@@ -43,7 +43,7 @@ bool SubsetSum(int nums[],int n,int sum)
 
       else if(i==0) dp[i][j]=false;
       
-      //else if(j==0) dp[i][j]=true;
+      else if(j==0) dp[i][j]=true;
 
       else if(nums[i-1]<=j){
         dp[i][j]= (dp[i-1][j-nums[i-1]]) || (dp[i-1][j]);

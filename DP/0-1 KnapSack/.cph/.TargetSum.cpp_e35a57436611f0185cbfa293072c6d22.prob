@@ -1,0 +1,1 @@
+{"name":"Local: TargetSum","url":"f:\\LeetCode-Solution\\DP\\0-1 KnapSack\\TargetSum.cpp","tests":[{"id":1614455302033,"input":"4\n4 1\n1 1 2 3\n5 3\n1 1 1 1 1\n2 1\n1 0\n9 1\n0 0 0 0 0 0 0 0 1","output":"3\n5\n2\n256"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\LeetCode-Solution\\DP\\0-1 KnapSack\\TargetSum.cpp","group":"local","local":true}
