@@ -1,0 +1,1 @@
+{"name":"Local: SubsetCountGivenDiff","url":"e:\\Leetcode Solution\\DP\\0-1 KnapSack\\SubsetCountGivenDiff.cpp","tests":[{"id":1614529627374,"input":"2\n4 1\n1 1 2 3\n4 3\n3 1 2 3","output":"3\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Leetcode Solution\\DP\\0-1 KnapSack\\SubsetCountGivenDiff.cpp","group":"local","local":true}
