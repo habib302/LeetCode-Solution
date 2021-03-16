@@ -1,0 +1,1 @@
+{"name":"Local: Template","url":"e:\\LeetCode-Solution\\DP\\0-1 KnapSack\\Template.cpp","tests":[{"id":1615870973219,"input":"1\n3\n1 2 3","output":"1 2 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LeetCode-Solution\\DP\\0-1 KnapSack\\Template.cpp","group":"local","local":true}

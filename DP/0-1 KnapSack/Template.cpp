@@ -6,7 +6,7 @@
 #include <map>
 
 using namespace std;
-void Solve(vector<int> nums,int k);
+void Solve(vector<int> nums,int n);
 
 int main(){
     
@@ -30,18 +30,16 @@ int main(){
       cin>>nums[i];
     }
 
-    Solve(nums,k);
+    Solve(nums,n);
 
   }  
 	return 0;
 }
 
-void Solve(vector<int> nums,int k){
-  int len=nums.size();
-  int n1=0,n2=0,a=0,b=0;
+void Solve(vector<int> nums,int n){
 
-  for(int i=0;i<len;i++){
-
+  for(int i=0;i<n;i++){
+    cout<<nums[i]<<" ";
   }
 
   //cout<<"5"<<endl;

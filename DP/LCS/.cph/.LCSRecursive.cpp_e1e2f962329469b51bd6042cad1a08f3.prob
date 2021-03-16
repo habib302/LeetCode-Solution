@@ -1,0 +1,1 @@
+{"name":"Local: LCSRecursive","url":"e:\\LeetCode-Solution\\DP\\LCS\\LCSRecursive.cpp","tests":[{"id":1615871642556,"input":"3\nabc ac\nabcdgh abedfhr\nabcdgh aedfhr","output":"2\n4\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\LeetCode-Solution\\DP\\LCS\\LCSRecursive.cpp","group":"local","local":true}
