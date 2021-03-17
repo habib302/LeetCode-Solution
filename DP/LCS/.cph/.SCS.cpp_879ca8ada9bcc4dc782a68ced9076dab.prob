@@ -1,0 +1,1 @@
+{"name":"Local: SCS","url":"f:\\LeetCode-Solution\\DP\\LCS\\SCS.cpp","tests":[{"id":1616002081000,"input":"2\ngeek eke\naggtab axtxayb","output":"5\n9"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\LeetCode-Solution\\DP\\LCS\\SCS.cpp","group":"local","local":true}

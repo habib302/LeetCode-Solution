@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int LCS(string x,string y,int n,int m);
+int SCS(string x,string y,int n,int m);
 
 int main()
  {
@@ -19,14 +19,14 @@ int main()
 
         int n=x.size(),m=y.size();
         
-        int result=LCS(x,y,n,m);
+        int result=SCS(x,y,n,m);
         cout<<result<<'\n';
         
     }
 	return 0;
 }
 
-int LCS(string x,string y,int n,int m)
+int SCS(string x,string y,int n,int m)
 {
     int dp[n+1][m+1];
     
@@ -38,13 +38,6 @@ int LCS(string x,string y,int n,int m)
             else dp[i][j]= max(dp[i][j-1],dp[i-1][j]);
         }
     }
-    for(int i=0;i<(n+1);i++){
-        for(int j=0;j<(m+1);j++){
-            cout<<dp[i][j]<<" ";
-        }
-        cout<<'\n';
-    }
 
-    
-    return dp[n][m];
+    return (n+m-dp[n][m]);
 }

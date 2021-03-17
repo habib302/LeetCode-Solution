@@ -1,0 +1,1 @@
+{"name":"Local: SCSprint","url":"f:\\LeetCode-Solution\\DP\\LCS\\SCSprint.cpp","tests":[{"id":1616003787404,"input":"1\nacbcf abcdaf","output":"acbcdaf"},{"id":1616004158479,"input":"1\nabac cab","output":"cabac"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\LeetCode-Solution\\DP\\LCS\\SCSprint.cpp","group":"local","local":true}
