@@ -1,0 +1,1 @@
+{"name":"Local: LCSubstring","url":"f:\\LeetCode-Solution\\DP\\LCS\\LCSubstring.cpp","tests":[{"id":1615947673560,"input":"1\nabcde abfce","output":"2"},{"id":1615948623196,"input":"1\nabcdgh acdghr","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\LeetCode-Solution\\DP\\LCS\\LCSubstring.cpp","group":"local","local":true}
