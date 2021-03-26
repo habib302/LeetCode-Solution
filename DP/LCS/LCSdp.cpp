@@ -38,12 +38,12 @@ int LCS(string x,string y,int n,int m)
             else dp[i][j]= max(dp[i][j-1],dp[i-1][j]);
         }
     }
-    for(int i=0;i<(n+1);i++){
-        for(int j=0;j<(m+1);j++){
-            cout<<dp[i][j]<<" ";
-        }
-        cout<<'\n';
-    }
+    // for(int i=0;i<(n+1);i++){
+    //     for(int j=0;j<(m+1);j++){
+    //         cout<<dp[i][j]<<" ";
+    //     }
+    //     cout<<'\n';
+    // }
 
     
     return dp[n][m];
