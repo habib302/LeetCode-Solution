@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-void LCSubstring(string x,string y,int n,int m);
+void LCSubstring(int n,int m,string x,string y);
 
 int main()
  {
@@ -17,20 +17,20 @@ int main()
         string x,y;
         cin>>x>>y;
 
-        int n=x.size(),m=y.size();
+        int m=x.size(),n=y.size();
         
-        LCSubstring(x,y,n,m);
+        LCSubstring(m,n,x,y);
     }
 	return 0;
 }
 
-void LCSubstring(string x,string y,int n,int m)
+void LCSubstring(int n,int m,string x,string y)
 {
-    int dp[n+1][m+1];
+    int dp[m+1][n+1];
     int len=0; //max length=0 hote pare,negative na
     int r=0,c=0;
-    for(int i=0;i<(n+1);i++){
-        for(int j=0;j<(m+1);j++){
+    for(int i=0;i<(m+1);i++){
+        for(int j=0;j<(n+1);j++){
             if(i==0) dp[i][j]=0;
             else if(j==0) dp[i][j]=0;
             else if(x[i-1]==y[j-1]) {
