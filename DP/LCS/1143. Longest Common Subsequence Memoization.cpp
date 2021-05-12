@@ -17,17 +17,15 @@ public:
         if(j==s2.size()) return 0;
         
         
-        int op1=0,op2=0,op3=0;
-        
         //choice diagram
         if(s1[i]==s2[j]){
-            op1 = 1 + helper(i+1,j+1,s1,s2);
+            return dp[i][j]= 1 + helper(i+1,j+1,s1,s2);
         }else{
-            op2 = helper(i+1,j,s1,s2);
-            op3 = helper(i,j+1,s1,s2);
+            int op1 = helper(i+1,j,s1,s2);
+            int op2 = helper(i,j+1,s1,s2);
+            
+            return dp[i][j]=max(op1,op2);
         }
-        
-        return dp[i][j] = max(op1,max(op2,op3));
         
     }
 };
