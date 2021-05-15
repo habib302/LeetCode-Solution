@@ -1,1 +1,0 @@
-{"name":"Local: LCSubstringPalindrome","url":"f:\\LeetCode-Solution\\DP\\LCS+Palindrome\\LCSubstringPalindrome.cpp","tests":[{"id":1616774769552,"input":"1\naacabdkacaa","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\LeetCode-Solution\\DP\\LCS+Palindrome\\LCSubstringPalindrome.cpp","group":"local","local":true}
