@@ -17,6 +17,9 @@ public:
         if(n==1) return 1;
         
         //choice diagram
-        return dp[n]=helper(n-1)+helper(n-2);
+        int op1 = helper(n-1);
+        int op2 = helper(n-2);
+        
+        return dp[n]=op1+op2;
     }
 };

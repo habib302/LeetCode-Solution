@@ -19,7 +19,11 @@ public:
         //base case 3
         if(n==2) return 1;
         
-        //choice diagram
-        return dp[n]=helper(n-1)+helper(n-2)+helper(n-3);
+         //choice diagram
+        int op1 = helper(n-1);
+        int op2 = helper(n-2);
+        int op3 = helper(n-3);
+        
+        return dp[n] = op1+op2+op3;
     }
 };
