@@ -1,0 +1,1 @@
+{"name":"Local: next smallest element to right","url":"f:\\LeetCode-Solution\\stack\\next smallest element to right.cpp","tests":[{"id":1625210669203,"input":"1\n5\n1 2 3 4 5","output":"-1 -1 -1 -1 -1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\LeetCode-Solution\\stack\\next smallest element to right.cpp","group":"local","local":true}

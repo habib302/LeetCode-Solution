@@ -1,0 +1,1 @@
+{"name":"Local: next greatest element to left","url":"f:\\LeetCode-Solution\\stack\\next greatest element to left.cpp","tests":[{"id":1625208757023,"input":"2\n4\n1 2 3 4\n4\n4 3 2 1","output":"-1 -1 -1 -1\n-1 4 3 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\LeetCode-Solution\\stack\\next greatest element to left.cpp","group":"local","local":true}
