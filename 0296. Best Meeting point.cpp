@@ -66,12 +66,9 @@ int helper(vector<vector<int>> nums){
     int yMedian = yCord[yCord.size()/2] ;
 
     int dist=0;
-    for(int i=0;i<xCord.size();i++){
-        dist += abs(xMedian-xCord[i]);
-    }
 
-    for(int i=0;i<yCord.size();i++){
-        dist += abs(yMedian-yCord[i]);
+    for(int i=0;i<xCord.size();i++){
+        dist = dist + abs(xMedian-xCord[i])  + abs(yMedian- yCord[i]);
     }
 
 
