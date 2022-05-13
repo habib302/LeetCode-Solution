@@ -30,10 +30,11 @@ public:
                 string curr=q.front();
                 q.pop();
                 
-                //try all possible combination
+                
                 for(int i=0;i<curr.size();i++){
                     string temp=curr;
                     
+                    //try all possible combination
                     for(char c='a' ; c<='z';c++){
                         
                         //change the i-th character
