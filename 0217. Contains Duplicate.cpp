@@ -1,3 +1,23 @@
+//using set
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        
+        set<int> set;
+        
+        for(int i=0;i<n;i++){
+            if(set.count(nums[i])){
+                return true;
+            }
+            else{
+                set.insert(nums[i]);
+            }
+        }
+        
+        return false;
+    }
+};
+----------------------------------------------
 //using sort
 class Solution {
 public:
