@@ -24,9 +24,7 @@ public:
         inOrder(root->right);
     }
 };
-
-
-
+----------------------------------------------------------------------------
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {

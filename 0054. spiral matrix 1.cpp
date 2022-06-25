@@ -13,7 +13,7 @@ public:
         
         while(left<=right && top<=bottom){
             
-            //left -> right
+            //left -> right9
             if(dir==1){
                 for(int i=left;i<=right;i++){
                     res.push_back(matrix[top][i]);

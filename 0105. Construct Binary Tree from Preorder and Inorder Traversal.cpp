@@ -18,7 +18,7 @@ public:
   
   TreeNode* helper(vector<int>& inOrder, vector<int>& preOrder, int inStart, int inEnd, int preStart, int preEnd){
     //base case
-    if(inStart > inEnd) return NULL;
+    if(inStart > inEnd || preStart > preEnd) return NULL;
     
     //finde rootVal, rootIndex, leftTreeSize from inOrder
     int rootVal=preOrder[preStart];

@@ -9,15 +9,15 @@ public:
         
         sort(intervals.begin(), intervals.end());
         
-        for(auto v: intervals){
+        for(auto interval: intervals){
             
             //check with minHeap top to start time
-            if(minHeap.size()>0 && minHeap.top() <= v[0]){
+            if(minHeap.size()>0 && minHeap.top() <= interval[0]){
                 minHeap.pop();
             }
             
             //push the end time
-            minHeap.push(v[1]);
+            minHeap.push(interval[1]);
         }
         
         return minHeap.size();

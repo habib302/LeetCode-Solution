@@ -1,38 +1,41 @@
 class Solution {
 public:
     string reverseVowels(string s) {
-      
-      int n=s.size(),left=0,right=0;
-      right=n-1;
-      
-      while(left <= right){
+        int n=s.size();
         
-        //find the left vowel
-        while(left<=right){
-          if(s[left] =='a'  || s[left] =='e'  ||s[left] =='i'  ||s[left] =='o'  ||s[left] =='u' || 
-             s[left] =='A'  || s[left] =='E'  ||s[left] =='I'  ||s[left] =='O'  ||s[left] =='U'){
-            break;
-          }
-          else left++;
-        }
+        int left=0,right=n-1;
+        set<char> set;
+        set.insert('a'); set.insert('e'); set.insert('i'); set.insert('o'); set.insert('u');
+        set.insert('A'); set.insert('E'); set.insert('I'); set.insert('O'); set.insert('U');
         
-        //find the left vowel
-        while(left<=right){
-          if(s[right] =='a'  || s[right] =='e'  ||s[right] =='i'  ||s[right] =='o'  ||s[right] =='u' ||
-             s[right] =='A'  || s[right] =='E'  ||s[right] =='I'  ||s[right] =='O'  ||s[right] =='U'){
-            break;
-          }
-          else right--;
+        while(left < right){
+            
+            //find left vowel
+            while(left < right){
+                char ch=s[left];
+                
+                if(set.count(ch)){
+                    break;
+                }
+                else left++;
+            }
+            
+			//find right vowel
+            while(left < right){
+                char ch=s[right];
+                
+                if(set.count(ch)){
+                    break;
+                }
+                else right--;
+            }
+            
+            
+            swap(s[left],s[right]);
+            left++;
+            right--;
+            
         }
-        
-        //swap them
-        if(left<=right){
-          swap(s[left],s[right]);
-          left++;
-          right--;
-        }
-      }
-      
-      return s;
+        return s;
     }
 };

@@ -2,76 +2,26 @@ class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
         
+        vector<set<int>> row(9);
+        vector<set<int>> col(9);
+        vector<set<int>> box(9);
         
-        //check row
-        for(int r=0;r<9;r++){
-            
-            set<char> set;
-            for(int c=0;c<9;c++){
-                if(board[r][c]=='.'){
-                    continue;
-                }
-                else{
-                    if(set.count(board[r][c])){
-                        return false;
-                    }
-                    else{
-                        set.insert(board[r][c]);
-                    }
-                }
-            }
-        }
-        
-        cout<<"row"<<'\n';
-        
-        //check col
-        for(int c=0;c<9;c++){
-            
-            set<char> set;
-            for(int r=0;r<9;r++){
-                if(board[r][c]=='.'){
-                    continue;
-                }
-                else{
-                    if(set.count(board[r][c])){
-                        return false;
-                    }
-                    else{
-                        set.insert(board[r][c]);
-                    }
-                }
-            }
-        }
-        cout<<"col"<<'\n';
-        
-        //check 3*3 sub-box
-        vector<pair<int,int>> arr{{0,0},{0,3},{0,6},
-                                  {3,0},{3,3},{3,6},
-                                  {6,0},{6,3},{6,6}};
-        
-        for(int i=0;i<arr.size();i++){
-            int r=arr[i].first;
-            int c=arr[i].second;
-            
-            cout<<r<<" "<<c<<'\n';
-            
-            set<char> set;
-            
-            for(int row=r;row<r+3;row++){
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
                 
-                for(int col=c;col<c+3;col++){
+                if(board[i][j] != '.'){
+                    int val=board[i][j]-'0';
                     
-                    if(board[row][col]=='.'){
-                        continue;
+                    int block = (i/3)*3 + (j/3);
+                    
+                    if(row[i].count(val) || col[j].count(val) || box[block].count(val)){
+                        return false;
                     }
-                    else{
-                        if(set.count(board[row][col])){
-                            return false;
-                        }
-                        else{
-                            set.insert(board[row][col]);
-                        }
-                    }
+                    
+                    //insert to the set
+                    row[i].insert(val);
+                    col[j].insert(val);
+                    box[block].insert(val);
                 }
             }
         }

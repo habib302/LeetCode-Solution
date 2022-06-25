@@ -2,25 +2,26 @@ class Solution {
 public:
     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
         
-        int m=image.size(), n=image[0].size();
-        
-        helper( image, sr, sc, newColor, image[sr][sc],m,n) ;
-        
-        
+        helper(sr, sc, image[sr][sc], newColor, image);
         return image;
     }
     
-    void helper(vector<vector<int>>& image, int i, int j, int newColor,int oldColor,int m,int n){
+    void helper(int i,int j,int oldColor, int newColor, vector<vector<int>>& image){
         
-        //base case
-        if(i<0 || i>=m ||j<0 || j>=n || image[i][j] != oldColor || image[i][j]==newColor) return ;
+        //boundary base case
+        if(i<0 || i==image.size() || j<0 || j==image[0].size())
+            return;
+        
+        if(image[i][j]==newColor || image[i][j]!=oldColor)
+            return;
         
         //color the pixel
         image[i][j]=newColor;
         
-        helper( image, i+1, j, newColor, oldColor,m,n) ;
-        helper( image, i-1, j, newColor, oldColor,m,n) ;
-        helper( image, i, j+1, newColor, oldColor,m,n) ;
-        helper( image, i, j-1, newColor, oldColor,m,n) ;
+        
+        helper(i+1, j, oldColor, newColor, image);
+        helper(i-1, j, oldColor, newColor, image);
+        helper(i, j+1, oldColor, newColor, image);
+        helper(i, j-1, oldColor, newColor, image);
     }
 };

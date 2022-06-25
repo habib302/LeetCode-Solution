@@ -28,10 +28,31 @@ public:
         return depth;
     }
 };
-
 ---------------------------------------------------------------------------------
+class Solution {
+public:
+    int minDepth(TreeNode* root) {
+        
+        //base case
+        if(root==NULL) return 0;
+        return minDepth2(root);
+    
+    }
+    int minDepth2(TreeNode* root) {
+        
+        //base case
+        if(root==NULL) return INT_MAX;
+        if(root->left==NULL && root->right==NULL) return 1;
+        
+        int left = minDepth2(root->left);
+    
+        int right = minDepth2(root->right);
+        
+        return min(left,right)+1;
+    }
+};
 
-
+------------------------------------------------------------------------------------
 class Solution {
 public:
     int minDepth(TreeNode* root) {
@@ -53,3 +74,4 @@ public:
         return min(left,right)+1;
     }
 };
+

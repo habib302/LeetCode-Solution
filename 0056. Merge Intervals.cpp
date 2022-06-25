@@ -2,26 +2,40 @@ class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         
-        int n=intervals.size();
-        
-        //base case
-        if(n==1) return intervals;
-        
-        sort(intervals.begin(),intervals.end());
+        sort(intervals.begin(), intervals.end());
         vector<vector<int>> res;
-        res.push_back(intervals[0]);
-        int j=0;
         
-        for(int i=1;i<n;i++){
+        int x1,y1,x2,y2;
+
+        x2=intervals[0][0];
+        y2=intervals[0][1];
+        
+                                                             
+        for(int i=0;i<intervals.size();i++){
             
-            if(res[j][1] >= intervals[i][0]){
-                res[j][1]= max(res[j][1],intervals[i][1]);
+            //first get the x1,y1
+            x1=intervals[i][0];
+            y1=intervals[i][1];
+            
+            //case 1:(x1,y1) < (x2,y2)
+            if(y1 < x2){
+                res.push_back({x1,y1});
             }
+            //case 2:(x1,y1) > (x2,y2)
+            else if(x1 > y2){
+                res.push_back({x2,y2});
+                
+                x2=x1;
+                y2=y1;
+            }
+            //case 3: overlap
             else{
-                j++;
-                res.push_back(intervals[i]);    
+                x2 = min(x1,x2);
+                y2 = max(y1,y2);
             }
         }
+        
+        res.push_back({x2,y2});
         
         return res;
     }
