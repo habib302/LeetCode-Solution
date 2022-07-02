@@ -4,27 +4,34 @@ public:
         
         int k=2;
         
-        unordered_map<char,int> map;
+        //char->frequency
+        unordered_map<char,int> mp;
         
-        int left=0,right=0,res=0;
+        int left=0,right=0,res=0,n=s.size();
         
-        while(right < s.size()){
+        for(right=0; right<n; right++){
             
-            map[s[right]]++;
+            char ch=s[right];
             
-            while(map.size() > k){
-                map[s[left]]--;
+            //update character frequency
+            mp[ch]++;
+            
+            while(mp.size() > k){
                 
-                //erase from map
-                if(map[s[left]]==0){
-                    map.erase(s[left]);
+                //decrease left character frequency by 1
+                mp[s[left]]--;
+                
+                //if chracter frequency is zero 
+                //then remove key from map
+                if(mp[s[left]]==0){
+                    mp.erase(s[left]);
                 }
                 
+                //update left by 1
                 left++;
             }
             
             res = max(res, right-left+1);
-            right++;
         }
         
         return res;

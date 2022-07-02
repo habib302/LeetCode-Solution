@@ -3,26 +3,35 @@ public:
     string minWindow(string s, string t) {
         
         //base case
-        if(s==t) return s;
-        if(t.size() > s.size()) return "";
+        if(s==t) 
+            return s;
+        if(t.size() > s.size()) 
+            return "";
         
-        unordered_map<char,int> map;
+        //frequency_map of t
+        unordered_map<char,int> mp;
         
         for(char ch:t){
-            map[ch]++;
+            mp[ch]++;
         }
         
-        int i=0,j=0,minLength=INT_MAX,mapSize=map.size();
+        int left=0,right=0,minLength=INT_MAX,mapSize=mp.size(),n=s.size();
         string res="";
         
-        while(j < s.size()){
-            char ch=s[j];
+        for(right=0; right<n; right++){
+            
+            char ch1=s[right];
             
             //step1: 1st check in map & update mapSize
-            if(map.find(ch) != map.end()){
-                map[ch]--;
+            if(mp.count(ch1)){
                 
-                if(map[ch]==0){
+                //decrease character frequency by 1
+                mp[ch1]--;
+                
+                //if character frequency is zero
+                //then we found that character all frequency
+                //so, we need to decrease mapSize by 1
+                if(mp[ch1]==0){
                     mapSize--;
                 }
             }
@@ -31,25 +40,24 @@ public:
             //mapSize==0 means we found the window  
             while(mapSize==0){
                 
-                //check minLength
-                if(minLength > j-i+1){
-                    minLength = min(minLength, j-i+1);
-                    res = s.substr(i, j-i+1);
+                //check minLength & update the result
+                if(minLength > right-left+1){
+                    minLength = min(minLength, right-left+1);
+                    res = s.substr(left, right-left+1);
                 }
                 
+                char ch2=s[left];
+                
                 //update the map & mapSize
-                if(map.find(s[i]) != map.end()){
-                    map[s[i]]++;
+                if(mp.count(ch2)){
+                    mp[ch2]++;
 
-                    if(map[s[i]]==1){
+                    if(mp[ch2]==1){
                         mapSize++;
                     }
                 }
-                i++;
+                left++;
             }
-            
-            //step3: increase the window end
-            j++;
         }
         
         return res;

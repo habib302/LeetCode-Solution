@@ -1,8 +1,30 @@
+method 1: general
+class Solution {
+public:
+    int findMaxConsecutiveOnes(vector<int>& nums) {
+        int count=0,maxCount=0,n=nums.size();
+        
+        for(int i=0;i<n;i++){
+            if(nums[i]==0){
+                count=0;
+            }
+            else{
+                count++;
+            }
+            
+            maxCount = max(count,maxCount);
+        }
+        
+        return maxCount;
+    }
+};
+------------------------------------------------------------
+method 2: sliding window
 class Solution {
 public:
     int findMaxConsecutiveOnes(vector<int>& nums) {
         
-        int left=0, right=0,n=nums.size(),length=0, zeroCount=0,k=0;
+        int left=0, right=0,n=nums.size(),res=0, zeroCount=0,k=0;
         
         for( right=0; right<n;right++){
             
@@ -19,9 +41,9 @@ public:
                 left++;
             }
             
-            length=max(length, right-left+1);
+            res=max(res, right-left+1);
         }
         
-        return length;
+        return res;
     }
 };
