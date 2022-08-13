@@ -5,22 +5,25 @@ class Solution {
 public:
     int firstBadVersion(int n) {
         
-        int start=1, end=n, res=-1;
+        //bad is always between the range
+        //so don't need to check base case
         
-        while(start <= end){
+        int start=1,end=n;
+        
+        //lower bound for binary search
+        while(start < end){
             
-            int mid= start +(end-start)/2;
+            int mid = start + (end-start)/2;
             
-            if(isBadVersion(mid)==true){
-                res = mid;
-                end = mid-1;
+            if(isBadVersion(mid)){
+                end = mid;
             }
             else{
                 start = mid+1;
             }
         }
         
-        return res;
+        return start;
     }
 };
 

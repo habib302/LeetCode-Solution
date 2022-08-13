@@ -10,9 +10,11 @@ public:
     
     int helper(int n,vector<int>& nums){
         //base case
-        if(n<0) return 0;
+        if(n<0) 
+			return 0;
         
-        if(dp[n] != -1) return dp[n];
+        if(dp[n] != -1) 
+			return dp[n];
         
         //choice diagram
         int op1 = helper(n-2,nums) + nums[n];

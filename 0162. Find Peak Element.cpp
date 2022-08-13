@@ -6,7 +6,8 @@ public:
         int start=0,end=n-1,mid;
         
         //base case
-        if(n==1) return 0;
+        if(n==1) 
+			return 0;
         
         while(start <= end){
             

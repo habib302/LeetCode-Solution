@@ -17,10 +17,14 @@ public:
     }
   
   bool isPalindrome(string s,int left,int right){
+	  
     while(left<right){
-      if(s[left] != s[right] ) return false;
+      if(s[left] != s[right] ) 
+		  return false;
+	  
       left++;
       right--;
+	  
     }
     return true;
   }

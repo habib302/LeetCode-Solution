@@ -3,7 +3,8 @@ public:
     TreeNode* invertTree(TreeNode* root) {
         
         //base case
-        if(root==NULL) return NULL;
+        if(root==NULL) 
+			return NULL;
         
         swap(root->left, root->right);
         

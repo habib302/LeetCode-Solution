@@ -10,10 +10,14 @@ public:
     int helper(int n, vector<int>& cost){
         
         //base case
-        if(n==0) return cost[0];
-        if(n==1) return cost[1];
+        if(n==0) 
+			return cost[0];
+        if(n==1) 
+			return cost[1];
         
-        if(dp[n] != -1) return dp[n];
+		//check in dp table
+        if(dp[n] != -1) 
+			return dp[n];
         
         int op1 = helper(n-1, cost);
         int op2 = helper(n-2, cost);

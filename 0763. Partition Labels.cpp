@@ -12,15 +12,15 @@ public:
         map[ch]=i;
       }
       
-      int maxIndex=0,lastIndex=0;
+      int maxIndex=0,lastIndex=-1;
       
       //step 2: traverse the string 
       for(int i=0;i<n;i++){
         char ch=s[i];
         maxIndex = max(maxIndex, map[ch]);
         if(maxIndex==i){
-          res.push_back(maxIndex-lastIndex+1);
-          lastIndex = i+1;
+          res.push_back(maxIndex-lastIndex);
+          lastIndex = i;
         }
       }
       

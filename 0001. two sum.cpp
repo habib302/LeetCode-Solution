@@ -5,19 +5,19 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         
         vector<int> res;
-        unordered_map<int,int> map;
+        unordered_map<int,int> mp;
         
         int n=nums.size(),temp=0;
         
         for(int i=0;i<n;i++){
             temp = target-nums[i];
             
-            if(map.find(temp) != map.end()){
-                res.push_back(map[temp]);  //1st index
+            if(mp.count(temp)){
+                res.push_back(mp[temp]);  //1st index
                 res.push_back(i);          //2nd index
                 break;
             }
-            else map.insert({nums[i],i});
+            else mp.insert({nums[i],i});
         }
         
         return res;

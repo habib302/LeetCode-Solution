@@ -13,11 +13,13 @@ public:
             //step2: calculate prefixSum
             prefixSum = prefixSum +nums[i];
             
+            int temp=prefixSum-k;
             //step3: check prefixSum-k into map
-            if(map.find(prefixSum-k) != map.end()){
+            
+            if(map.count(temp)){
                 
                 //step4: update count with frequency
-                count = count + map[prefixSum-k];
+                count = count + map[temp];
             }
             
             //step5: save prefixSum with frequency

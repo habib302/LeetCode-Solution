@@ -47,7 +47,8 @@ public:
                 end--;
             }
             
-            if(tolower(s[start]) != tolower(s[end])) return false;
+            if(tolower(s[start]) != tolower(s[end])) 
+				return false;
             else{
                 start++;
                 end--;

@@ -9,12 +9,17 @@ public:
     
     int helper(int n){
         
-        if(dp[n]!=-1) return dp[n];
-        
         //base case 1
-        if(n==1) return 1;
-        if(n==2) return 2;
-        if(n==3) return 3;
+        if(n==1) 
+			return 1;
+        if(n==2) 
+			return 2;
+        if(n==3) 
+			return 3;
+		
+		//check in dp table
+		if(dp[n]!=-1) 
+			return dp[n];
         
         //choice diagram
         int op1 = helper(n-1);

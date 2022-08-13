@@ -15,11 +15,11 @@ public:
                 res.push_back(right);
                 break;
             }
-            else if(sum > target){
-                right--;
+            else if(sum < target){
+                left++;
             }
             else{
-                left++;
+                right--;
             }
         }
         

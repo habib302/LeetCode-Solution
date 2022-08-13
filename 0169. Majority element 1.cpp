@@ -30,7 +30,7 @@ public:
             
             if(count==0){
                 majority=nums[i];
-                count++;
+                count=1;
             }
             else if(majority==nums[i]){ 
                 count++;
